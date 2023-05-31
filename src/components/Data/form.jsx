@@ -3,6 +3,7 @@ import styles from './form.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { registerActions } from '../../store/register';
 import { loginActions } from '../../store/login';
+import { modalActions } from '../../store/toggleModal';
 
 const Form = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,28 @@ const Form = () => {
         else {
             dispatch(loginActions.providerLogin());
         }
+    }
+
+    const loginSubmitHandler = () => {
+        alert('Successfully Logged in');
+        if (showLoginFormCustomer) {
+            dispatch(loginActions.customerLogin());
+        }
+        else {
+            dispatch(loginActions.providerLogin());
+        }
+        dispatch(modalActions.close());
+    }
+    const registerSubmitHandler = () => {
+        alert('Successfully Registered');
+        if (showRegisterFormCustomer) {
+            dispatch(registerActions.customerRegister());
+        }
+        else {
+            dispatch(registerActions.providerRegister());
+        }
+        dispatch(registerActions.registerPage());
+        dispatch(modalActions.close());
     }
 
     const showLoginPageHandler = () => {
@@ -41,7 +64,7 @@ const Form = () => {
                             <input type="email" placeholder='Email' />
                             <input type="password" placeholder='Password' />
                             <div className={styles.buttonContainer}>
-                                <button>Login</button>
+                                <button onClick={loginSubmitHandler}>Login</button>
                                 <button onClick={showRegisterPageHandler}>Register</button>
                             </div>
                         </div>
@@ -54,7 +77,7 @@ const Form = () => {
                             <input type="password" placeholder='Password' />
                             <input type="password" placeholder='Confirm Password' />
                             <div className={styles.buttonContainer}>
-                                <button>Register</button>
+                                <button onClick={registerSubmitHandler}>Register</button>
                                 <button onClick={showLoginPageHandler}>Login</button>
                             </div>
                         </div>
