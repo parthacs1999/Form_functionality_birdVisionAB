@@ -1,0 +1,39 @@
+.container {
+  min-width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer {
+  min-width: 500px;
+}
+.cancelButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+.icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.icon:hover {
+  opacity: 0.8;
+}
+.clickConatiner {
+  padding: 10px;
+}
+.click {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.textContainer:hover {
+  opacity: 0.8;
+}
+.rightArrowIcon {
+  width: 30px;
+}
