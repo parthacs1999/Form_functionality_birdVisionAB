@@ -17,7 +17,7 @@ const registerSlice = createSlice({
             state.showRegisterFormProvider = !state.showRegisterFormProvider;
         },
         registerPage(state) {
-            state.showRegisterForm = !state.showRegisterForm;
+            state.showRegisterPage = !state.showRegisterPage;
         }
     }
 })
