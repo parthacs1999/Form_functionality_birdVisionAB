@@ -1,0 +1,43 @@
+.container {
+  min-width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 5px black;
+}
+.container h2 {
+  padding: 5px;
+  font-weight: 600;
+  font-style: italic;
+  color: #ad8b73;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 60px -16px teal;
+}
+.loginContainer {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+.userIcon {
+  color: rgb(13, 77, 161);
+  width: 20px;
+  height: 20px;
+}
+.loginContainer p {
+  font-size: 20px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: rgb(13, 77, 161);
+}
+
+.loginContainer:active {
+  box-shadow: none;
+}
