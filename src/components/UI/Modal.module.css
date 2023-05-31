@@ -37,18 +37,3 @@
 .rightArrowIcon {
   width: 30px;
 }
-.modal {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: top 0.3s ease-in-out;
-}
-
-.modal.active {
-  top: 0;
-}
